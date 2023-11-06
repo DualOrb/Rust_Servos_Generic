@@ -1,6 +1,8 @@
 # Rust Generic Servos
 
-## A simple API layer for manipulating servo motors connected to GPIO pins on a Raspberry Pi4 (BCM Naming).
+A simple API layer for manipulating servo motors.
+
+Provides direct interface to a Raspberry Pi 4, or can use it to calculate the pulse widths required for a different interface
 
 ## Features
 - Uses hardware PWM if available (standard GPIO library uses software PWM and is more jittery)

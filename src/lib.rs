@@ -26,7 +26,7 @@ struct Servo {
 }
 
 impl Servo {
-    ///Initializes all environment variables necessary for the servo
+    ///Initializes raspberry pi related services
     pub fn init() -> Result<(), std::error> {
 
     }
@@ -34,7 +34,7 @@ impl Servo {
     ///Sets the angle of the servo to an angle defined in radians
     pub fn set_angle_deg(&self, angle: &f32) {
         //Checks it is within bounds and passes to generic angle calc for servo
-        if (self.min_angle > *angle && angle > &self.max_angle) {
+        if self.min_angle > *angle && angle > &self.max_angle {
             panic!("Angle provided is out of bounds");
         }
 
