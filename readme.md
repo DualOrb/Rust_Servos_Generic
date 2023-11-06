@@ -1,17 +1,17 @@
-Rust Generic Servos
+# Rust Generic Servos
 
-A simple API layer for manipulating servo motors connected to GPIO pins on a Raspberry Pi4 (BCM Naming).
+## A simple API layer for manipulating servo motors connected to GPIO pins on a Raspberry Pi4 (BCM Naming).
 
-Features
+## Features
 - Uses hardware PWM if available (standard GPIO library uses software PWM and is more jittery)
 - Easily set angles in degrees or radians in which you want the servo to be in
 - Error detection for if you request it to go over the angle bounds specified
 - Similar gpio manipulation as the main GPIO library
 - CLI interface for testing / scripting applications
 
-Notes
+## Notes
 - To use hardware PWM, add dtoverlay=pwm-2chan to /boot/config.txt on Raspberry Pi OS or boot/firmware/usercfg.txt on Ubuntu
 - To use PWM, ensure you are either a superuser or that the user is added to the "gpio" permissions group
 
-Dependencies
+## Dependencies
 - This library makes use of RPPAL, at low level GPIO manipulaton library
