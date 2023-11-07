@@ -46,7 +46,7 @@ impl Servo {
     }
 
     ///Calculates the pulse widths necessary to achieve the angle
-    fn calculate_pulse_widths(&self, angle: &f32) -> (f32) {
+    pub fn calculate_pulse_widths(&self, angle: &f32) -> (f32) {
         return ((self.max_pulse_width - self.min_pulse_width)
             / self.max_angle * angle)
             + self.min_pulse_width;
